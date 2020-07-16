@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata: 
+ name: eks-cluster
+ region: ap-south-1
+nodeGroups:
+ — name: eks-ng1
+   desiredCapacity: 2
+   instanceType: t2.micro
+   ssh: 
+     publicKeyName: thekey1
+ — name: eks-ng2
+   desiredCapacity: 2
+   instanceType: t2.small
+   ssh:
+     publicKeyName: thekey1
